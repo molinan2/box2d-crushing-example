@@ -1,4 +1,4 @@
-package com.jmolina.crushing;
+package com.jmolina.crushing.data;
 
 public class UserData {
 

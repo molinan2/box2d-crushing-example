@@ -3,7 +3,7 @@ package com.jmolina.crushing.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.jmolina.crushing.Crushing;
+import com.jmolina.crushing.Box2DCrushingExample;
 
 public class HtmlLauncher extends GwtApplication {
 
@@ -14,6 +14,6 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener createApplicationListener () {
-                return new Crushing();
+                return new Box2DCrushingExample();
         }
 }
