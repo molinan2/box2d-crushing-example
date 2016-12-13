@@ -19,7 +19,7 @@ public class MainStage extends Stage {
         image.setPosition(0, 0);
         image.setScale(1, 1);
         image.setSize(25.6f, 25.6f);
-        addActor(image);
+        //addActor(image);
     }
 
 }
