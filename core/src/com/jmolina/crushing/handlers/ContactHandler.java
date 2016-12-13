@@ -9,9 +9,9 @@ import com.jmolina.crushing.data.UserData;
 
 public class ContactHandler implements ContactListener {
 
-    private GameHandler gameHandler;
+    private com.jmolina.crushing.interfaces.GameHandler gameHandler;
 
-    public ContactHandler(GameHandler gameHandler) {
+    public ContactHandler(com.jmolina.crushing.interfaces.GameHandler gameHandler) {
         this.gameHandler = gameHandler;
     }
 

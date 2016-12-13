@@ -1,4 +1,4 @@
-package com.jmolina.crushing.handlers;
+package com.jmolina.crushing.interfaces;
 
 public interface GameHandler {
 

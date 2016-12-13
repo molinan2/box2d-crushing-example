@@ -1,10 +1,11 @@
 package com.jmolina.crushing;
 
 import com.badlogic.gdx.Game;
+import com.jmolina.crushing.screens.MainScreen;
 
 public class Box2DCrushingExample extends Game {
 
-    private com.jmolina.crushing.screens.MainScreen mainScreen;
+    private MainScreen mainScreen;
 	private int height;
 
 	public Box2DCrushingExample(int height) {
@@ -13,7 +14,7 @@ public class Box2DCrushingExample extends Game {
 
 	@Override
 	public void create () {
-        mainScreen = new com.jmolina.crushing.screens.MainScreen(height);
+        mainScreen = new MainScreen(height);
         setScreen(mainScreen);
 	}
 

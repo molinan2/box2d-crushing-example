@@ -18,6 +18,9 @@ import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.jmolina.crushing.data.UserData;
+import com.jmolina.crushing.handlers.ContactHandler;
+import com.jmolina.crushing.interfaces.GameHandler;
 
 public class MainScreen extends ScreenAdapter {
 
@@ -48,7 +51,7 @@ public class MainScreen extends ScreenAdapter {
 
         createBodies();
 
-        world.setContactListener(new com.jmolina.crushing.handlers.ContactHandler(new com.jmolina.crushing.handlers.GameHandler() {
+        world.setContactListener(new ContactHandler(new GameHandler() {
             @Override
             public void destroy() {
                 lock();
@@ -132,9 +135,9 @@ public class MainScreen extends ScreenAdapter {
         createWall(2, WORLD_HEIGHT, WORLD_WIDTH, WORLD_HEIGHT /2);
         crusher = createBox(10, 8, 22, WORLD_HEIGHT /2);
         hidden = createBox(9.8f, 7.8f, crusher.getPosition().x, crusher.getPosition().y);
-        hidden.setUserData(new com.jmolina.crushing.data.UserData(true, false));
+        hidden.setUserData(new UserData(true, false));
         destroyable = createBall(1, BALL_X, BALL_Y);
-        destroyable.setUserData(new com.jmolina.crushing.data.UserData(false, true));
+        destroyable.setUserData(new UserData(false, true));
         crusher.setLinearVelocity(0, -4);
         hidden.setLinearVelocity(0, -4);
     }
@@ -173,7 +176,7 @@ public class MainScreen extends ScreenAdapter {
 
         Body body = world.createBody(bodyDef);
         body.createFixture(fixtureDef);
-        body.setUserData(new com.jmolina.crushing.data.UserData());
+        body.setUserData(new UserData());
 
         fixtureDef.shape.dispose();
 
