@@ -22,10 +22,17 @@ import com.jmolina.crushing.data.UserData;
 import com.jmolina.crushing.handlers.ContactHandler;
 import com.jmolina.crushing.interfaces.GameHandler;
 
+
+/**
+ * The only screen of the game
+ */
 public class MainScreen extends ScreenAdapter {
 
+    // World size
     private final float WORLD_WIDTH = 32f;
     private final float WORLD_HEIGHT = 24f;
+
+    // Ball starting position
     private final float BALL_X = 4f;
     private final float BALL_Y = 12f;
 
@@ -33,24 +40,37 @@ public class MainScreen extends ScreenAdapter {
     private boolean locked = false;
     private World world;
     private Box2DDebugRenderer debugRenderer;
+    private Body crusher, hidden, ball;
     private Viewport viewport;
-    private Body crusher, hidden, destroyable;
     private SpriteBatch batch;
     private BitmapFont font;
 
-
+    /**
+     * The screen of the game
+     *
+     * @param windowHeight Height of the Desktop window
+     */
     public MainScreen(int windowHeight) {
+        this.windowHeight = windowHeight;
+
+        // Creates the world
         world = new World(new Vector2(0, -40f), false);
+        debugRenderer = new Box2DDebugRenderer();
+
+        // Creates the viewport and places the camera so the (0,0) is bottom left
         viewport = new FitViewport(WORLD_WIDTH, WORLD_HEIGHT);
         viewport.getCamera().position.set(WORLD_WIDTH /2, WORLD_HEIGHT /2, 0);
-        debugRenderer = new Box2DDebugRenderer();
+
+        // Creates a batch and font for simple text rendering
         batch = new SpriteBatch();
         font = new BitmapFont();
         font.setColor(Color.WHITE);
-        this.windowHeight = windowHeight;
 
+        // Creates all bodies
         createBodies();
 
+        // Attach a contact listener to the physics world, so that it will be able
+        // to lock the game when the ball gets destroyed
         world.setContactListener(new ContactHandler(new GameHandler() {
             @Override
             public void destroy() {
@@ -64,13 +84,17 @@ public class MainScreen extends ScreenAdapter {
         Gdx.gl.glClearColor(0.25f, 0.25f, 0.25f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        // If the game is locked, physics and bodies are locked
         if (!locked) {
             world.step(1/60f, 8, 3);
             updateCrusher();
             updateBall();
         }
 
+        // Check if the user wants to restart the game
         checkRestart();
+
+        // Render the bodies and the text
         debugRenderer.render(world, viewport.getCamera().combined);
         renderText();
     }
@@ -88,6 +112,9 @@ public class MainScreen extends ScreenAdapter {
         font.dispose();
     }
 
+    /**
+     * Polls the keyboard and restart the game if the key is pressed
+     */
     private void checkRestart() {
         if (Gdx.input.isKeyPressed(Input.Keys.R)) {
             unlock();
@@ -95,6 +122,9 @@ public class MainScreen extends ScreenAdapter {
         }
     }
 
+    /**
+     * Moves the crusher and the hidden destroyer up and down
+     */
     private void updateCrusher() {
         if (crusher.getPosition().y < 0) {
             crusher.setLinearVelocity(0, 4);
@@ -106,16 +136,22 @@ public class MainScreen extends ScreenAdapter {
         }
     }
 
+    /**
+     * Polls the keyboard to let the user move the ball
+     */
     private void updateBall() {
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            destroyable.applyLinearImpulse(-1, 0, destroyable.getPosition().x, destroyable.getPosition().y, true);
+            ball.applyLinearImpulse(-1, 0, ball.getPosition().x, ball.getPosition().y, true);
         }
 
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            destroyable.applyLinearImpulse(1, 0, destroyable.getPosition().x, destroyable.getPosition().y, true);
+            ball.applyLinearImpulse(1, 0, ball.getPosition().x, ball.getPosition().y, true);
         }
     }
 
+    /**
+     * Render the simple informative text
+     */
     private void renderText() {
         batch.begin();
 
@@ -129,19 +165,43 @@ public class MainScreen extends ScreenAdapter {
         batch.end();
     }
 
+    /**
+     * Create all the physic bodies
+     */
     private void createBodies() {
+        float sizeRatio = 0.98f;
+        float crusherWidth = 10;
+        float crusherHeight = 8;
+        Vector2 crusherVelocity = new Vector2(0, -4);
+
+        // Static walls
         createWall(WORLD_WIDTH, 2, WORLD_WIDTH /2, 0);
         createWall(2, WORLD_HEIGHT, 0, WORLD_HEIGHT /2);
         createWall(2, WORLD_HEIGHT, WORLD_WIDTH, WORLD_HEIGHT /2);
-        crusher = createBox(10, 8, 22, WORLD_HEIGHT /2);
-        hidden = createBox(9.8f, 7.8f, crusher.getPosition().x, crusher.getPosition().y);
-        hidden.setUserData(new UserData(true, false));
-        destroyable = createBall(1, BALL_X, BALL_Y);
-        destroyable.setUserData(new UserData(false, true));
-        crusher.setLinearVelocity(0, -4);
-        hidden.setLinearVelocity(0, -4);
+
+        // Kinetic crusher and its hidden destroyer. The hidden destroyer is placed
+        // at the same point and moves at the same pace that the crusher.
+        crusher = createBox(crusherWidth, crusherHeight, 22, WORLD_HEIGHT /2);
+        crusher.setLinearVelocity(crusherVelocity);
+
+        hidden = createBox(sizeRatio * crusherWidth, sizeRatio * crusherHeight, crusher.getPosition().x, crusher.getPosition().y);
+        hidden.setLinearVelocity(crusherVelocity);
+        hidden.setUserData(new UserData(true, false)); // UserData 'destroyer'
+
+        // Dynamic ball to be destroyed
+        ball = createBall(1, BALL_X, BALL_Y);
+        ball.setUserData(new UserData(false, true)); // UserData 'destructible'
     }
 
+    /**
+     * Creates a static wall
+     *
+     * @param width     Width
+     * @param height    Height
+     * @param x         X position
+     * @param y         Y position
+     * @return          The body
+     */
     private Body createWall(float width, float height, float x, float y) {
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(0.5f * width, 0.5f * height);
@@ -149,6 +209,15 @@ public class MainScreen extends ScreenAdapter {
         return createBody(shape, BodyDef.BodyType.StaticBody, x, y);
     }
 
+    /**
+     * Creates a kinetic box
+     *
+     * @param width     Width
+     * @param height    Height
+     * @param x         X position
+     * @param y         Y position
+     * @return          The body
+     */
     private Body createBox(float width, float height, float x, float y) {
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(0.5f * width, 0.5f * height);
@@ -156,6 +225,14 @@ public class MainScreen extends ScreenAdapter {
         return createBody(shape, BodyDef.BodyType.KinematicBody, x, y);
     }
 
+    /**
+     * Creates a dynamic ball
+     *
+     * @param radius    Radius
+     * @param x         X position
+     * @param y         Y position
+     * @return          The body
+     */
     private Body createBall(float radius, float x, float y) {
         CircleShape shape = new CircleShape();
         shape.setRadius(radius);
@@ -163,6 +240,15 @@ public class MainScreen extends ScreenAdapter {
         return createBody(shape, BodyDef.BodyType.DynamicBody, x, y);
     }
 
+    /**
+     * Creates a generic body
+     *
+     * @param shape    Shape
+     * @param type     Type (Dynamic, Kinetic or Static)
+     * @param x        X position
+     * @param y        Y position
+     * @return         The body
+     */
     private Body createBody(Shape shape, BodyDef.BodyType type, float x, float y) {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
@@ -183,18 +269,27 @@ public class MainScreen extends ScreenAdapter {
         return body;
     }
 
+    /**
+     * Locks the game
+     */
     private void lock() {
         locked = true;
     }
 
+    /**
+     * Unlocks the game
+     */
     private void unlock() {
         locked = false;
     }
 
+    /**
+     * Restart the game
+     */
     private void restart() {
-        destroyable.setLinearVelocity(0, 0);
-        destroyable.setAngularVelocity(0);
-        destroyable.setTransform(BALL_X, BALL_Y, 0);
+        ball.setLinearVelocity(0, 0);
+        ball.setAngularVelocity(0);
+        ball.setTransform(BALL_X, BALL_Y, 0);
         unlock();
     }
 

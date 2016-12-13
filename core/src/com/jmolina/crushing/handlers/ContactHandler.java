@@ -6,12 +6,17 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.jmolina.crushing.data.UserData;
+import com.jmolina.crushing.interfaces.GameHandler;
 
+
+/**
+ * Detects a collision between bodies and activates their destruction if necessary.
+ */
 public class ContactHandler implements ContactListener {
 
-    private com.jmolina.crushing.interfaces.GameHandler gameHandler;
+    private GameHandler gameHandler;
 
-    public ContactHandler(com.jmolina.crushing.interfaces.GameHandler gameHandler) {
+    public ContactHandler(GameHandler gameHandler) {
         this.gameHandler = gameHandler;
     }
 
@@ -22,7 +27,10 @@ public class ContactHandler implements ContactListener {
         UserData userDataA = (UserData) bodyA.getUserData();
         UserData userDataB = (UserData) bodyB.getUserData();
 
-        if (userDataA.isDestroyable() && userDataB.isDestroyer() || userDataA.isDestroyer() && userDataB.isDestroyable()) {
+        // Any collision between destructible and destroyer bodies leads to
+        // the game "destroy" (locked) state
+        if (userDataA.isDestructible() && userDataB.isDestroyer() ||
+            userDataA.isDestroyer() && userDataB.isDestructible()) {
             gameHandler.destroy();
         }
     }
