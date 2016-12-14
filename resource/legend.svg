@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="704"
+   height="256"
+   viewBox="0 0 704.00001 256.00001"
+   id="svg4290"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="legend.svg">
+  <defs
+     id="defs4292" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="553.22503"
+     inkscape:cy="108.57381"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     borderlayer="true"
+     inkscape:window-width="1858"
+     inkscape:window-height="1177"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     objecttolerance="10000"
+     guidetolerance="10000"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4298"
+       spacingx="64.000001"
+       spacingy="63.999999"
+       empspacing="4"
+       originx="-0.28340552"
+       originy="-512.53701" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4295">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.28340585,-283.82516)">
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.75294118"
+       id="rect4320"
+       width="704"
+       height="255.99998"
+       x="0.28341085"
+       y="283.82516"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:23.25677109px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:0.75294118;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="80.506004"
+       y="371.51016"
+       id="text4234"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4236"
+         x="80.506004"
+         y="371.51016"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">◄</tspan><tspan
+         sodipodi:role="line"
+         x="80.506004"
+         y="429.6521"
+         id="tspan4238"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">►</tspan><tspan
+         sodipodi:role="line"
+         x="80.506004"
+         y="488.05017"
+         id="tspan4240"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.25677109px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:0.75294118;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="135.89"
+       y="371.51016"
+       id="text4234-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="135.89"
+         y="371.51016"
+         id="tspan4240-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118">Move the ball to the left</tspan><tspan
+         sodipodi:role="line"
+         x="135.89"
+         y="429.6521"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118"
+         id="tspan4270">Move the ball to the right</tspan><tspan
+         sodipodi:role="line"
+         x="135.89"
+         y="487.79401"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118"
+         id="tspan4272">Restart</tspan></text>
+  </g>
+</svg>

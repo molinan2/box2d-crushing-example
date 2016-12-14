@@ -19,12 +19,13 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.jmolina.crushing.data.UserData;
+import com.jmolina.crushing.gdx.BitmapFontFixed;
 import com.jmolina.crushing.handlers.ContactHandler;
-import com.jmolina.crushing.interfaces.GameHandler;
+import com.jmolina.crushing.interfaces.GameActions;
 
 
 /**
- * The only screen of the game
+ * The only screen of the game, containing the Box2D physic world, visual elements and game logic.
  */
 public class MainScreen extends ScreenAdapter {
 
@@ -63,15 +64,15 @@ public class MainScreen extends ScreenAdapter {
 
         // Creates a batch and font for simple text rendering
         batch = new SpriteBatch();
-        font = new BitmapFont();
-        font.setColor(Color.WHITE);
+        font = new BitmapFont(Gdx.files.internal("roboto.fnt"));
+        // font.setColor(Color.WHITE);
 
         // Creates all bodies
         createBodies();
 
         // Attach a contact listener to the physics world, so that it will be able
         // to lock the game when the ball gets destroyed
-        world.setContactListener(new ContactHandler(new GameHandler() {
+        world.setContactListener(new ContactHandler(new GameActions() {
             @Override
             public void destroy() {
                 lock();

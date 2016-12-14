@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="box2d-crushing.svg"
-   inkscape:export-filename="C:\cygwin64\home\Juanma\crushing\resource\box2d-crushing.png"
+   inkscape:export-filename="C:\ProgramsDev\cygwin64\home\Juanma\box2d-crushing-example\resource\box2d-crushing.png"
    inkscape:export-xdpi="45"
    inkscape:export-ydpi="45">
   <defs
@@ -97,20 +97,22 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="591.98275"
-     inkscape:cy="545.29564"
+     inkscape:cx="764.42258"
+     inkscape:cy="528.62976"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
-     inkscape:window-width="1304"
-     inkscape:window-height="745"
+     inkscape:window-width="1858"
+     inkscape:window-height="1177"
      inkscape:window-x="54"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     borderlayer="true"
+     inkscape:showpageshadow="true">
     <inkscape:grid
        type="xygrid"
        id="grid3336"
@@ -134,14 +136,8 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-132.36218)">
-    <rect
-       style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3338-3"
-       width="1069.2548"
-       height="1064.2094"
-       x="-24.014271"
-       y="6.8979774" />
+     transform="translate(0,-132.36218)"
+     style="display:inline">
     <rect
        style="fill:#189a61;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3338"

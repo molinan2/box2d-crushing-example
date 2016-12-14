@@ -6,7 +6,7 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.jmolina.crushing.data.UserData;
-import com.jmolina.crushing.interfaces.GameHandler;
+import com.jmolina.crushing.interfaces.GameActions;
 
 
 /**
@@ -14,10 +14,10 @@ import com.jmolina.crushing.interfaces.GameHandler;
  */
 public class ContactHandler implements ContactListener {
 
-    private GameHandler gameHandler;
+    private GameActions gameActions;
 
-    public ContactHandler(GameHandler gameHandler) {
-        this.gameHandler = gameHandler;
+    public ContactHandler(GameActions gameActions) {
+        this.gameActions = gameActions;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class ContactHandler implements ContactListener {
         // the game "destroy" (locked) state
         if (userDataA.isDestructible() && userDataB.isDestroyer() ||
             userDataA.isDestroyer() && userDataB.isDestructible()) {
-            gameHandler.destroy();
+            gameActions.destroy();
         }
     }
 
