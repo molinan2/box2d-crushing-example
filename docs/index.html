@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+       <head>
+              <title>crushing</title>
+              <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+              <link href="styles.css" rel="stylesheet" type="text/css">
+              <script src="soundmanager2-setup.js"></script>
+  			      <script src="soundmanager2-jsmin.js"></script>
+              
+              <style type="text/css">
+                .main {background-color: #fafafa; width: 800px; margin: auto; font-family: 'Open Sans', sans-serif; color: #444;}
+                h2 {font-size: 32px; color: #666;}
+                p {font-size: 20px;}
+                a {color: #8af; font-weight: bold; text-decoration: none;}
+                #embed-html canvas {border: 1px solid #444; border-radius: 0px; box-shadow: 8px 8px 16px rgba(0,0,0,0.5);}
+              </style>
+
+       </head>
+
+       <body class="main">
+              <!--
+              <a class="superdev" href="javascript:%7B%20window.__gwt_bookmarklet_params%20%3D%20%7B'server_url'%3A'http%3A%2F%2Flocalhost%3A9876%2F'%7D%3B%20var%20s%20%3D%20document.createElement('script')%3B%20s.src%20%3D%20'http%3A%2F%2Flocalhost%3A9876%2Fdev_mode_on.js'%3B%20void(document.getElementsByTagName('head')%5B0%5D.appendChild(s))%3B%7D">&#8635;</a>
+              -->
+
+              <h2>Box2D Crushing Example in libGDX</h2>
+              <p>An interactive example of the <a href="https://github.com/molinan2/box2d-crushing-example">Box2D Crushing</a> trick made with libGDX. You may need to click the frame to enable the input. More info at <a href="https://drefactor.wordpress.com/?p=59">this blog post</a>.</p>
+              <p>&nbsp;</p>
+
+              <div align="center" id="embed-html"></div>
+              <script type="text/javascript" src="html/html.nocache.js"></script>
+       </body>
+
+       <script>
+              function handleMouseDown(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = 'default';
+              }
+
+              function handleMouseUp(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = '';
+              }
+              document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
+              document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+       </script>
+</html>
