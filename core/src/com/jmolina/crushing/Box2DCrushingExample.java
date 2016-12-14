@@ -10,19 +10,13 @@ import com.jmolina.crushing.screens.MainScreen;
 public class Box2DCrushingExample extends Game {
 
     private MainScreen mainScreen;
-	private int height;
 
 	public Box2DCrushingExample() {
-        this(480);
     }
-
-	public Box2DCrushingExample(int height) {
-		this.height = height;
-	}
 
 	@Override
 	public void create () {
-        mainScreen = new MainScreen(height);
+        mainScreen = new MainScreen();
         setScreen(mainScreen);
 	}
 

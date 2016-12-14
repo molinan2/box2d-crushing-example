@@ -9,25 +9,189 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="704"
-   height="256"
-   viewBox="0 0 704.00001 256.00001"
+   width="640"
+   height="400"
+   viewBox="0 0 640.00001 400.00001"
    id="svg4290"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="legend.svg">
+   sodipodi:docname="legend.svg"
+   inkscape:export-filename="C:\ProgramsDev\cygwin64\home\Juanma\box2d-crushing-example\resource\legend.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
   <defs
-     id="defs4292" />
+     id="defs4292">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5213">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5215" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5217" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5219" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset5221" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5223" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5225">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5227" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5229" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5231" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset5233" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5235" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5213-9">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5215-3" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5217-9" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5219-3" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset5221-0" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5223-6" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5213-0">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5215-8" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5217-4" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5219-5" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset5221-01" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5223-2" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5213-0-4">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5215-8-3" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5217-4-9" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5219-5-1" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset5221-01-4" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5223-2-6" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="553.22503"
-     inkscape:cy="108.57381"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="369.03742"
+     inkscape:cy="183.91844"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -68,62 +232,78 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="Legend"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-0.28340585,-283.82516)">
-    <rect
-       style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.75294118"
-       id="rect4320"
-       width="704"
-       height="255.99998"
-       x="0.28341085"
-       y="283.82516"
-       inkscape:export-xdpi="45"
-       inkscape:export-ydpi="45" />
+     transform="translate(-0.28340585,-139.82516)"
+     style="display:inline">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:23.25677109px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:0.75294118;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="80.506004"
-       y="371.51016"
+       style="font-style:normal;font-weight:normal;font-size:23.25677109px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5225)"
+       x="44.140514"
+       y="290.69794"
        id="text4234"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4236"
-         x="80.506004"
-         y="371.51016"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">◄</tspan><tspan
+         x="44.140514"
+         y="290.69794"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1">◄</tspan><tspan
          sodipodi:role="line"
-         x="80.506004"
-         y="429.6521"
+         x="44.140514"
+         y="348.83987"
          id="tspan4238"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">►</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1">►</tspan><tspan
          sodipodi:role="line"
-         x="80.506004"
-         y="488.05017"
+         x="44.140514"
+         y="407.23795"
          id="tspan4240"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#000000;fill-opacity:0.75294118">R</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1">R</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.25677109px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:0.75294118;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="135.89"
-       y="371.51016"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.25677109px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5213)"
+       x="99.524506"
+       y="290.69794"
        id="text4234-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="135.89"
-         y="371.51016"
+         x="99.524506"
+         y="290.69794"
          id="tspan4240-2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118">Move the ball to the left</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1">Move the ball to the left</tspan><tspan
          sodipodi:role="line"
-         x="135.89"
-         y="429.6521"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118"
+         x="99.524506"
+         y="348.83987"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1"
          id="tspan4270">Move the ball to the right</tspan><tspan
          sodipodi:role="line"
-         x="135.89"
-         y="487.79401"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.75294118"
-         id="tspan4272">Restart</tspan></text>
+         x="99.524506"
+         y="406.98178"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1"
+         id="tspan5287">Restart</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.25677109px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5213-0);"
+       x="24.194469"
+       y="513.5813"
+       id="text4234-5-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="24.194469"
+         y="513.5813"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;"
+         id="tspan5287-8">Crushed!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.25677109px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5213-0-4)"
+       x="22.534544"
+       y="189.3223"
+       id="text4234-5-5-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="22.534544"
+         y="189.3223"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.51354218px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1"
+         id="tspan5287-8-4">Box2D Crushing Example</tspan></text>
   </g>
 </svg>

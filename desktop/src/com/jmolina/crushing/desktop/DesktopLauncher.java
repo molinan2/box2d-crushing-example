@@ -12,6 +12,6 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
         config.width = width;
         config.height = height;
-		new LwjglApplication(new Box2DCrushingExample(height), config);
+		new LwjglApplication(new Box2DCrushingExample(), config);
 	}
 }

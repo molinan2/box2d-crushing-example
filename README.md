@@ -26,6 +26,6 @@ How to compile
 
 Just import the project using Android Studio and let Gradle configure the dependencies. There are more details in the libGDX wiki for [IntelliJ IDEA](https://github.com/libgdx/libgdx/wiki/Gradle-and-Intellij-IDEA), [Eclipse](https://github.com/libgdx/libgdx/wiki/Gradle-and-Eclipse), [Netbeans](https://github.com/libgdx/libgdx/wiki/Gradle-and-NetBeans) and [Command line](https://github.com/libgdx/libgdx/wiki/Gradle-on-the-Commandline).
 
-I've tested the Desktop module. I didn't test the Android module but it should work. I couldn't get working the HTML module.
+I've tested the Desktop and HTML modules. I didn't test the Android module but it should work.
 
 ![](https://molinan2.github.io/box2d-crushing-example/resource/box2d-crushing-desktop.png)
